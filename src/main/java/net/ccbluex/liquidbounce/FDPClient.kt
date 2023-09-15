@@ -38,8 +38,8 @@ import kotlin.concurrent.thread
 object FDPClient {
 
     // Client information
-    const val CLIENT_NAME = "FDPClient"
-    const val COLORED_NAME = "§7[§b§lFDPClient§7] "
+    const val CLIENT_NAME = "dizwi client"
+    const val COLORED_NAME = "§7[§b§ldizwi client§7] "
     const val CLIENT_CREATOR = "CCBlueX, Zywl & SkidderMC TEAM"
     const val CLIENT_WEBSITE = "fdpinfo.github.io"
     const val CLIENT_VERSION = "v5.4.0"
