@@ -17,6 +17,7 @@ class NCPLongjump : LongJumpMode("NCP") {
         if (mc.thePlayer.onGround) {
             mc.thePlayer.motionX = 0.0
             mc.thePlayer.motionZ = 0.0
+            mc.thePlayer.motionY = 0.05
         }else {
             MovementUtils.strafe(MovementUtils.getSpeed() * if (canBoost) ncpBoostValue.get() else 1f)
             if(canBoost) canBoost = false
