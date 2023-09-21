@@ -1143,10 +1143,6 @@ class Scaffold : Module() {
                 "static2" -> {
                     Rotation(((MovementUtils.direction * 180f / Math.PI).toFloat() + 135), placeRotation.rotation.pitch)
                 }
-                "Stabilized" -> {
-                    Rotation(round(rotation.yaw / 45f) * 45f, rotation.pitch)
-                else -> rotation
-                }
                 "custom" -> {
                     Rotation(mc.thePlayer.rotationYaw + customtowerYawValue.get(), customtowerPitchValue.get().toFloat())
                 }
@@ -1206,6 +1202,10 @@ class Scaffold : Module() {
                 }
                 "static2" -> {
                     Rotation(((MovementUtils.direction * 180f / Math.PI).toFloat() + 135), placeRotation.rotation.pitch)
+                }
+                "Stabilized" -> {
+                Rotation(round(rotation.yaw / 45f) * 45f, rotation.pitch)
+                else -> rotation
                 }
                 "custom" -> {
                     Rotation(mc.thePlayer.rotationYaw + customYawValue.get(), customPitchValue.get().toFloat())
