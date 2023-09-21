@@ -1205,7 +1205,6 @@ class Scaffold : Module() {
                 }
                 "Stabilized" -> {
                 Rotation(round(rotation.yaw / 45f) * 45f, rotation.pitch)
-                else -> rotation
                 }
                 "custom" -> {
                     Rotation(mc.thePlayer.rotationYaw + customYawValue.get(), customPitchValue.get().toFloat())
