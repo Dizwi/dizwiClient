@@ -141,7 +141,7 @@ class Scaffold : Module() {
     private val rotOptions = BoolValue("Rotation Options: ", true)
 
     // Rotations
-    private val rotationsValue = ListValue("Rotations", arrayOf("None", "Better", "Vanilla", "AAC", "Static1", "Static2", "Stabilized", "Custom", "Advanced", "Backwards", "Snap", "BackSnap"), "Backwards").displayable { rotOptions.get() }
+    private val rotationsValue = ListValue("Rotations", arrayOf("None", "Better", "Vanilla", "AAC", "Static1", "Static2", "Custom", "Advanced", "Backwards", "Snap", "BackSnap"), "Backwards").displayable { rotOptions.get() }
     private val towerrotationsValue = ListValue("TowerRotations", arrayOf("None", "Better", "Vanilla", "AAC", "Static1", "Static2", "Custom"), "AAC").displayable { rotOptions.get() }
     private val advancedYawModeValue = ListValue("AdvancedYawRotations", arrayOf("Offset", "Static", "RoundStatic", "Vanilla", "Round", "MoveDirection", "OffsetMove"), "MoveDirection").displayable { rotationsValue.equals("Advanced") && rotationsValue.displayable}
     private val advancedPitchModeValue = ListValue("AdvancedPitchRotations", arrayOf("Offset", "Static", "Vanilla"), "Static").displayable { rotationsValue.equals("Advanced") && rotationsValue.displayable }
@@ -1202,9 +1202,6 @@ class Scaffold : Module() {
                 }
                 "static2" -> {
                     Rotation(((MovementUtils.direction * 180f / Math.PI).toFloat() + 135), placeRotation.rotation.pitch)
-                }
-                "Stabilized" -> {
-                Rotation(round(rotation.yaw / 45f) * 45f, rotation.pitch)
                 }
                 "custom" -> {
                     Rotation(mc.thePlayer.rotationYaw + customYawValue.get(), customPitchValue.get().toFloat())
